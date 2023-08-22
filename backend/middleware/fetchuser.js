@@ -1,8 +1,8 @@
 const jwt=require('jsonwebtoken')
-const JWT_SECRET='hellomiss'      //sailt
+const JWT_SECRET='hellomiss'      //sault
 
 const fetchuser=(req,res,next)=>{
-    //Get ther user from the jwt token and add id to req object
+    //Get ther user from the jwt token and add it to req object
     const token =req.header('auth-token')
     if(!token){
         res.status(401).send({error:"please authenticate using valid token "});

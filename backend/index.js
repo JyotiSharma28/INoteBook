@@ -1,6 +1,9 @@
+
+//main file 
+
 const connectToMongo=require('./db')
 const expres=require('express')
-const cors=require('cors')
+const cors=require('cors') 
 
 connectToMongo();
 

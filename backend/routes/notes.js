@@ -27,6 +27,7 @@ router.post('/addnote',fetchuser,[
               const {title,description,tag}=req.body;
                
               const errors=validationResult(req);
+
               if(!errors.isEmpty()){
                   return res.status(400).json({errors:errors.array()});
               }
@@ -69,6 +70,7 @@ router.put('/updatenote/:id',fetchuser,async(req,res)=>{
 
        note=await Note.findByIdAndUpdate(req.params.id,{$set:newNote},{new:true})
        res.send(note)
+       
   } catch (error) {
        console.error(error.message)
        res.status(500).send("Internal Server Error")

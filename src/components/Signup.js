@@ -14,7 +14,7 @@ function Signup(props) {
        const handleSubmit=async(e)=>{
         e.preventDefault();
      
-       const  {name,email,password}=credential 
+        const  {name,email,password}=credential 
 
         const response = await fetch("http://localhost:5000/api/auth/createuser", {
      
@@ -69,8 +69,6 @@ function Signup(props) {
         </div>
         <button type="submit" className="btn btn-primary">Submit</button>
 </form>
-        
-
     </div>
   )
 }

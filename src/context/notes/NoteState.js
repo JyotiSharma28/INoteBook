@@ -1,17 +1,15 @@
-import { json } from "react-router-dom";
+
 import NoteContext from "./NoteContext";
 import { useState } from "react";
 
 const NoteState = (props)=>{
 
   const host="http://localhost:5000"
-  const token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRiZTE3NjE4YTVkYTQyNWE3MTZkMjI0In0sImlhdCI6MTY5MDE3OTQ1Nn0.cplraX-pwcq65QrswZb01FxyW39Xc6TDne76UrZvUYg"
+ // const token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRiZTE3NjE4YTVkYTQyNWE3MTZkMjI0In0sImlhdCI6MTY5MDE3OTQ1Nn0.cplraX-pwcq65QrswZb01FxyW39Xc6TDne76UrZvUYg"
 
     const notesInitial = []
 
-
       const [notes, setNotes] = useState(notesInitial)
-
 
        //GET NOTE
        const getNotes=async()=>{

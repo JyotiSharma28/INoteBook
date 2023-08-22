@@ -52,7 +52,6 @@ const onChange=(e)=>{
           <label htmlFor="password" >Password</label>
           <input type="password" className="form-control" name='password'value={credential.password} id="exampleInputPassword1" onChange={onChange} placeholder="Password"/>
         </div>
-      
         <button type="submit" className="btn btn-primary" >Submit</button>
      </form>
     </div>
