@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router';
+import { Link } from 'react-router-dom';
 
 function Signup(props) {
 
@@ -69,6 +70,8 @@ function Signup(props) {
         </div>
         <button type="submit" className="btn btn-primary">Submit</button>
 </form>
+<br />
+<p>Have an account? <Link to="/login" >login</Link> </p>
     </div>
   )
 }

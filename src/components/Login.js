@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { createBrowserRouter, useNavigate } from 'react-router-dom';
+import { Link, createBrowserRouter, useNavigate } from 'react-router-dom';
 
 const Login=(props)=> {
 
@@ -54,6 +54,8 @@ const onChange=(e)=>{
         </div>
         <button type="submit" className="btn btn-primary" >Submit</button>
      </form>
+     <br />
+     <p>Don't have an account? <Link to="/signup" >register</Link> </p>
     </div>
   )
 }
