@@ -16,7 +16,7 @@ function Signup(props) {
      
         const  {name,email,password}=credential 
 
-        const response = await fetch("http://localhost:5000/api/auth/createuser", {
+        const response = await fetch("https://inotebook-backend-ohj1.onrender.com/api/auth/createuser", {
      
         method: "POST", // *GET, POST, PUT, DELETE, etc.
          
