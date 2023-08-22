@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const NoteState = (props)=>{
 
-  const host="http://localhost:5000"
+  const host="https://inotebook-backend-ohj1.onrender.com"
   const token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRiZTE3NjE4YTVkYTQyNWE3MTZkMjI0In0sImlhdCI6MTY5MDE3OTQ1Nn0.cplraX-pwcq65QrswZb01FxyW39Xc6TDne76UrZvUYg"
 
     const notesInitial = []
