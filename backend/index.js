@@ -1,27 +1,31 @@
 
-//main file 
+require('dotenv').config({ path: 'backend/.env' });
 
-const connectToMongo=require('./db')
-const expres=require('express')
-const cors=require('cors') 
+const connectToMongo = require('./db')
+const express = require('express')
+const cors = require('cors')
 
 connectToMongo();
 
-const app=expres();
-const port=5000
+const app = express();
+const PORT = process.env.PORT || 5000;
 
 app.use(cors())
-app.use(expres.json())
+app.use(express.json())
 
-app.get('/',(req,res)=>{
+app.get('/', (req, res) => {
 
-    res.status(200).json({message:"server is running...."});
-    
+    res.status(200).json({ message: "server is running...." });
+
 })
 
-app.use('/api/auth',require('./routes/auth'))
-app.use('/api/notes',require('./routes/notes'))
+app.use('/api/auth', require('./routes/auth'))
+app.use('/api/notes', require('./routes/notes'))
 
-app.listen(port, () => {
-    console.log(`Server started on port`);
-});
+app.listen(PORT, (err) => {
+    if (err) {
+        console.log("Error occurred while starting the server..." + err);
+        return
+    }
+    console.log(`server started on PORT --> ${PORT}`);
+})
